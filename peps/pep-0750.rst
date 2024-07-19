@@ -464,10 +464,10 @@ unlike function scope.
 .. note::
 
     The use of annotation scope means it's not possible to fully desugar
-    interpolations into Python code, as was shown earlier. Instead it's as if
-    one is writing ``interpolation_lambda: tag``, not ``lambda: tag``, where a
-    hypothetical ``interpolation_lambda`` keyword variant uses annotation scope
-    instead of the standard function scope.
+    interpolations into Python code. Instead it's as if one is writing
+    ``interpolation_lambda: tag``, not ``lambda: tag``, where a hypothetical
+    ``interpolation_lambda`` keyword variant uses annotation scope instead of
+    the standard function scope.
 
     This is more or less how the reference implementation implements this
     concept (but without creating a new keyword of course).
@@ -536,7 +536,7 @@ the following, at the cost of losing some type specificity:
     def mytag(*args: str | tuple) -> Any:
         ...
 
-A user might write a tag string as a split string:
+A user might write a tag string as follows:
 
 .. code-block:: python
 
@@ -590,8 +590,8 @@ This is equivalent to:
 .. note::
 
     To keep it simple, this and subsequent desugaring omits an important scoping
-    aspect in how names in interpolation expressions are resolved. See
-    `Interpolation Expression Evaluation`_.
+    aspect in how names in interpolation expressions are resolved, specifically
+    when defining classes. See `Interpolation Expression Evaluation`_.
 
 No Empty Decoded String
 -----------------------
