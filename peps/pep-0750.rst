@@ -736,12 +736,12 @@ Consumers can look at tag strings as starting from f-strings:
 
 - They look familiar
 - Scoping and syntax rules are the same
-- You just need to import the tag function
 
 They first thing they need to absorb: unlike f-strings, the string isn't
 immediately evaluated "in-place". Something else (the tag function) happens.
 That's the second thing to teach: the tag functions do something particular.
-Thus the concept of "domain specific languages" (DSLs).
+Thus the concept of "domain specific languages" (DSLs). What's extra to
+teach: you need to import the tag function before tagging a string.
 
 Tag function authors think in terms of making a DSL. They have
 business policies they want to provide in a Python-familiar way. With tag
