@@ -31,6 +31,7 @@ Tag functions accept prepared arguments and return a string:
 .. code-block:: python
 
     def greet(*args):
+        """Tag function to return a greeting with an upper-case recipient."""
         salutation, recipient, *_ = args
         _, getvalue = recipient
         return f"{salutation.title().strip()} {getvalue().upper()}!"
@@ -729,7 +730,7 @@ functions.
 All three groups can start from an important framing:
 
 - Existing solutions (such as template engines) can do parts of tag strings
-- But tag strings move everything closer to "normal Python"
+- But tag strings move logic closer to "normal Python"
 
 Consumers can look at tag strings as starting from f-strings:
 
@@ -742,12 +743,12 @@ immediately evaluated "in-place". Something else (the tag function) happens.
 That's the second thing to teach: the tag functions do something particular.
 Thus the concept of "domain specific languages" (DSLs).
 
-Tag function authors therefore think in terms of making a DSL. They have
+Tag function authors think in terms of making a DSL. They have
 business policies they want to provide in a Python-familiar way. With tag
 functions, Python is going to do much of the pre-processing. This lowers
 the bar for making a DSL.
 
-Tag authors can start with simple uses. Tag strings can then open to larger
+Tag authors can begin with simple use cases. After authors gain experience, tag strings can be used to add larger
 patterns: lazy evaluation, intermediate representations, registries, and more.
 
 Finally, framework authors can provide contact points with their lifecycles.
