@@ -751,10 +751,6 @@ the bar for making a DSL.
 Tag authors can begin with simple use cases. After authors gain experience, tag strings can be used to add larger
 patterns: lazy evaluation, intermediate representations, registries, and more.
 
-Finally, framework authors can provide contact points with their lifecycles.
-For example, decorators which tag function authors can use to memoize
-interpolations in the function args.
-
 Each of these points also match the teaching of decorators. In that case,
 a learner consumes something which applies to the code just after it. They
 don't need to know too much about decorator theory to take advantage of the
